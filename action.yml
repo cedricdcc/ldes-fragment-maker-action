@@ -1,0 +1,9 @@
+name: "LDES fragment maker"
+description: "This action will create a series of ldes fragments for a given repository"
+author: "Decruw Cedric"
+branding:
+  icon: "git-branch"
+  color: "blue"
+runs:
+  using: "docker"
+  image: "Dockerfile"
