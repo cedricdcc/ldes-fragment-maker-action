@@ -38,14 +38,14 @@ fname = "ldes_constraints.ttl"
 with open(os.path.join(BASE_DIR, "ldes", fname), "w") as f:
     f.write(ldes_fragment)
 
-# wuth subprocesses print ls -al
-subprocess.run("ls -al".split())
+# wuth subprocesses print ls -al and print the output
+subprocess.run("ls -al".split(), text=True)
 
 
 def get_changed_files():
 
     # open ldes/hash file and read the hash
-    with open(os.path.join("./", "ldes/last_ldes_hash"), "r") as f:
+    with open(os.path.join("../", "ldes/last_ldes_hash"), "r") as f:
         hash = f.read()
     print(hash)
 
@@ -143,7 +143,7 @@ def make_ldes_ttl_file(changed_files, previous_hash, current_hash):
         f.write(ldes_fragment)
 
     # write the current hash to the last hash file
-    with open(os.path.join("./", "ldes/last_ldes_hash"), "w") as f:
+    with open(os.path.join("../", "ldes/last_ldes_hash"), "w") as f:
         f.write(current_hash)
 
 
