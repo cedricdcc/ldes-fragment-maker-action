@@ -10,7 +10,7 @@ ls -al
 rsync --recursive --progress -avzh ./github/workspace/* ./
 
 cd src
-
+ls -al
 # executing the setup.sh script
 python ymls_to_ldes_ttl.py
 
